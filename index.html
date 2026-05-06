@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandur Productions | An Amogha Raj Sandur Project</title>
+    <meta
+      name="description"
+      content="Sandur Productions is an independent student-led production house by Amogha Raj Sandur. Creators of THE SCAM finance web series and UTTARA short film."
+    />
+    <meta name="author" content="Amogha Raj Sandur" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/SandurProductions_Logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Font Awesome for Social Brands) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #262626;
+            --accent-color: #ffa31a;
+            --secondary-color: #f2f2f2;
+            --glass-bg: rgba(242, 242, 242, 0.05);
+            --glass-border: rgba(242, 242, 242, 0.1);
+            --text-primary: #f2f2f2;
+            --text-secondary: rgba(242, 242, 242, 0.6);
+            --accent-glow: rgba(255, 163, 26, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 30%, #2a2a2a 0%, #1a1a1a 100%);
+        }
+
+        .glow-orb {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.15;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(10%, 10%); }
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Profile Section */
+        .profile {
+            margin-bottom: 40px;
+        }
+
+        .logo-wrapper {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+            position: relative;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--bg-color);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Links */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .link-card i {
+            font-size: 1.25rem;
+            transition: var(--transition);
+        }
+
+        /* Brand Specific Hovers */
+        .link-card.primary { background: var(--accent-color); color: var(--bg-color); border: none; }
+        .link-card.primary:hover { background: #ffb547; box-shadow: 0 12px 32px rgba(255, 163, 26, 0.25); }
+
+        .link-card.youtube:hover { border-color: #FF0000; color: #FF0000; box-shadow: 0 0 20px rgba(255, 0, 0, 0.15); }
+        .link-card.linkedin:hover { border-color: #0077B5; color: #0077B5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.15); }
+        .link-card.instagram:hover { border-color: #E4405F; color: #E4405F; box-shadow: 0 0 20px rgba(228, 64, 95, 0.15); }
+        .link-card.threads:hover { border-color: #ffffff; color: #ffffff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); }
+
+        /* Click/Active States */
+        .link-card:active { transform: scale(0.98); }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.05em;
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(242, 242, 242, 0.2);
+            transition: var(--transition);
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="glow-orb" style="top: 10%; left: 10%;"></div>
+        <div class="glow-orb" style="bottom: 10%; right: 10%; background: radial-gradient(circle, rgba(255, 163, 26, 0.1) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="container">
+        <header class="profile">
+            <div class="logo-wrapper">
+                <img src="assets/SandurProductions_Logo.png" alt="Sandur Productions Logo" class="logo">
+            </div>
+            <h1>Sandur Productions</h1>
+            <p class="subtitle">Creator of <i>"THE SCAM"</i> and <i>"UTTARA"</i></p>
+            <br>
+            <p class="subtitle" style="font-size: 0.7rem;">An Amogha Raj Sandur Project</p>
+        </header>
+
+        <div class="links-container">
+            <a href="https://sandurproductions.pages.dev" class="link-card primary">
+                <i class="fa-solid fa-globe"></i>
+                Official Website
+            </a>
+
+            <a href="https://sandurproductions.pages.dev/projects" class="link-card" target="_blank">
+                <i class="fa-solid fa-film"></i>
+                Our Filmography
+            </a>
+            
+            <a href="https://www.youtube.com/@SandurProductions" class="link-card youtube" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+                YouTube
+            </a>
+            
+            <a href="https://www.linkedin.com/company/sandur-productions/" class="link-card linkedin" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+            </a>
+            
+            <a href="https://www.instagram.com/sandur_productions/" class="link-card instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+            
+            <a href="https://www.threads.net/@sandur_productions" class="link-card threads" target="_blank">
+                <i class="fa-brands fa-threads"></i>
+                Threads
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 <a href="https://www.linkedin.com/in/amogharajsandur/" target="_blank">AMOGHA RAJ SANDUR</a> & SANDUR PRODUCTIONS.
+            <br>
+            ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+</body>
+</html>

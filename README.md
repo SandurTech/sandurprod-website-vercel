@@ -10,7 +10,7 @@ This repository serves as a permanent redirection bridge from the legacy Vercel 
 
 ### Rationale
 
-To maintain search engine rankings (SEO) and ensure that existing links to cinematic works like *THE SCAM* and *UTTARA* continue to function, this repository handles all traffic redirection at the edge. The primary codebase has been migrated to a private repository deployed on Cloudflare Pages for enhanced security and better infrastructure management.
+To maintain search engine rankings (SEO) and ensure that existing links to cinematic works like _THE SCAM_ and _UTTARA_ continue to function, this repository handles all traffic redirection at the edge. The primary codebase has been migrated to a private repository deployed on Cloudflare Pages for enhanced security and better infrastructure management.
 
 ## Project Information
 
@@ -20,4 +20,5 @@ Sandur Productions is an independent student-led production house founded by **A
 - **Official Website**: [sandurproductions.pages.dev](https://sandurproductions.pages.dev/en)
 
 ---
+
 © 2026 Sandur Productions. All rights reserved.
